@@ -79,3 +79,62 @@ footer {
     text-align: center;
     color: #aaa;
 }
+
+
+main > h2 {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 32px;
+    color: #c8f169;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 30px 8%;
+}
+
+.produto {
+    background-color: #222;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #444;
+}
+
+.produto h3 {
+    color: #c8f169;
+    margin-bottom: 15px;
+}
+
+.produto p {
+    margin-bottom: 12px;
+    color: #ccc;
+}
+
+.produto button {
+    background-color: #c8f169;
+    color: #111;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.produto button:hover {
+    background-color: white;
+}
+
+@media (max-width: 900px) {
+    .produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .produtos {
+        grid-template-columns: 1fr;
+    }
+}
