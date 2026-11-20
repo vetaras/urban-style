@@ -28,7 +28,9 @@
                     <h3>{{ produto.nome }}</h3>
                     <p>Categoria: {{ produto.categoria }}</p>
                     <p>Preço: R$ {{ "%.2f"|format(produto.preco) }}</p>
-                    <button>Adicionar ao carrinho</button>
+                    <form action="{{ url_for('adicionar_carrinho', produto_id=produto.id) }}" method="POST">
+                        <button type="submit">Adicionar ao carrinho</button>
+                    </form>
                 </div>
             {% endfor %}
         </section>
